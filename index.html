@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Price Index</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Currency Price Index</h1>   
+        <h2>Base Currency: EUR</h2>
+        <table>
+            <thead>
+              <tr>
+                <th>Currencies</th>
+                <th>Market Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(currency, rate) in exchangeRates">
+                <td>{{ currency }}</td>
+                <td>{{ rate }}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="index.js"></script>
+</body>
+</html>
